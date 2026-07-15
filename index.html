@@ -63,9 +63,10 @@
         <h1>EDLP Pricing Backup</h1>
         <p>If the Optimizer is failing to load live prices, click the button below to copy the latest backup data. Paste it into the "Offline Pricing Backup" section in the Optimizer settings.</p>
         
-        <button id="copy-btn">📋 Copy Backup Data</button>
+        <button id="copy-btn"> Copy Backup Data</button>
         
-        {
+        <!-- IF YOU ARE UPDATING EDLP DAYA PUT PUT IT BETWEEN THE TWO TEXT AREA TAGS DIRECTLY BELOW. -->
+        <textarea id="json-data" readonly>{
   "devices": {
     "a12": {
       "att": {
@@ -1268,16 +1269,6 @@
       }
     }
   }
-}
-        <textarea id="json-data" readonly>{
-  "devices": {
-    "example_device": {
-      "name": "Example Phone",
-      "att": { "total": 199, "monthly": 5.53 },
-      "vzw": { "total": 199, "monthly": 5.53 },
-      "tmo": { "total": 199, "dp": 0, "monthly": 8.30 }
-    }
-  }
 }</textarea>
         
         <div class="last-updated">Last Updated: July 2026</div>
@@ -1296,7 +1287,7 @@
                 document.execCommand('copy');
                 // Visual feedback
                 const originalText = btn.innerHTML;
-                btn.innerHTML = "✅ Copied to Clipboard!";
+                btn.innerHTML = " Copied to Clipboard!";
                 btn.classList.add('success');
                 
                 setTimeout(() => {
